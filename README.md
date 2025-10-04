@@ -1,97 +1,88 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+WOMFinanceTest is a React Native app (TypeScript).
 
-# Getting Started
+It includes a simple authentication flow and a Pokémon list/detail viewer. The Home screen shows the logged-in email and provides a logout FAB with a confirmation dialog.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Features
 
-## Step 1: Start Metro
+- Authentication: email/password validation, token generation, 1-hour session expiry, persistent session via AsyncStorage, and logout with confirmation.
+- Home: grid list of Pokémon with infinite scroll (debounced), pull-to-refresh, error state with retry, empty state, header shows logged-in email, logout FAB.
+- Detail: hero image, basic info (height, weight, base XP), chips for types and abilities, sprites grid, evolution list with tap-to-navigate, dynamic theming colors.
+- Theming: light/dark mode via `useColorScheme`, colors applied to headers and text.
+- Architecture: Redux Toolkit slices (`auth`, `pokemon`, `pokemonDetail`), Axios service with base URL and basic error mapping, typed models under `@typings`.
+- UI Kit: atoms/molecules/organisms/templates with reusable components (Button, Text, Input, FormField, Chip, Fab, etc.).
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Requirements
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- Node `>=20`
+- Xcode (iOS) / Android Studio (Android)
+- Yarn or npm
 
-```sh
-# Using npm
-npm start
+Install
 
-# OR using Yarn
-yarn start
-```
+- Install JS deps: `npm i` or `yarn`
+- iOS only (first time and when native deps change):
+  - `bundle install`
+  - `cd ios && bundle exec pod install && cd ..`
 
-## Step 2: Build and run your app
+Run
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Start Metro: `npm start` or `yarn start`
+- Android: `npm run android` or `yarn android`
+- iOS: `npm run ios` or `yarn ios`
 
-### Android
+Tip
 
-```sh
-# Using npm
-npm run android
+- After changing path aliases, reset Metro cache: `npm start -- --reset-cache`
 
-# OR using Yarn
-yarn android
-```
+Scripts
 
-### iOS
+- `start`: Run Metro bundler
+- `android` / `ios`: Build and run app
+- `lint`: ESLint
+- `test`: Jest unit tests
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Path Aliases
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+- `@components` → `src/components`
+- `@screens` → `src/screens`
+- `@store` → `src/store` (also `@store` root for index)
+- `@theme` → `src/theme`
+- `@typings` → `src/types` (do not import from `@types`)
+- `@utils` → `src/utils`
+- `@services` → `src/services`
+- `@navigation` → `src/navigation/index`
+- `@assets` → `src/assets`
 
-```sh
-bundle install
-```
+Examples
 
-Then, and every time you update your native dependencies, run:
+- Import a component: `import { Button } from '@components'`
+- Import a type: `import type { PokemonListItem } from '@typings/pokemon'`
 
-```sh
-bundle exec pod install
-```
+Notable UI Behavior
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+- Logout confirmation: pressing the logout FAB shows a confirmation alert before dispatching logout.
 
-```sh
-# Using npm
-npm run ios
+Project Structure
 
-# OR using Yarn
-yarn ios
-```
+- `src/components`: atoms, molecules, organisms, templates, and `index.ts` barrel
+- `src/screens`: `LoginScreen`, `HomeScreen`, `DetailScreen`
+- `src/navigation`: Root stack navigator
+- `src/store`: Redux Toolkit slices and store setup
+- `src/services`: API calls (e.g., Pokémon)
+- `src/types` (aliased as `@typings`): shared app types
+- `src/theme`: colors, typography, spacing, etc.
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+TypeScript
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+- Extends `@react-native/typescript-config`
+- Check types locally: `./node_modules/.bin/tsc --noEmit`
 
-## Step 3: Modify your app
+Testing
 
-Now that you have successfully run the app, let's make changes!
+- Run tests: `npm test` or `yarn test`
+- Jest is configured with moduleNameMapper for the aliases
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Troubleshooting
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Metro can't resolve aliases: ensure Metro is started from project root and try `--reset-cache`.
+- "Cannot import type declaration files": use `@typings/...` instead of `@types/...`.

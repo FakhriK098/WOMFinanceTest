@@ -1,15 +1,12 @@
 import React, { useCallback } from 'react';
 import { StyleSheet, View, useColorScheme } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import AuthTemplate from '../components/templates/AuthTemplate';
-import LoginForm from '../components/organisms/LoginForm';
-import { AppDispatch, RootState } from '../store';
-import { login } from '../store/slices/authSlice';
-import Text from '../components/atoms/Text';
-import { colors } from '../theme/colors';
-import { spacing } from '../theme/spacing';
-import { typography } from '../theme/typography';
-import Spacer from '../components/atoms/Spacer';
+import { AuthTemplate, LoginForm, Text, Spacer } from '@components';
+import { AppDispatch, RootState } from '@store';
+import { login } from '@store/slices/authSlice';
+import { colors } from '@theme/colors';
+import { spacing } from '@theme/spacing';
+import { typography } from '@theme/typography';
 
 const LoginScreen = () => {
   const dispatch = useDispatch<AppDispatch>();

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text as RNText } from 'react-native'
-import type { TextAtomProps } from '../../types/components'
-import { weight as fontWeight } from '../../theme/typography'
+import type { TextAtomProps } from '@typings/components'
+import { weight as fontWeight } from '@theme/typography'
 
 const Text = ({ children, weight = 'regular', color, size = 16, style, ...rest }: TextAtomProps) => {
   return (

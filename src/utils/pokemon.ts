@@ -1,4 +1,4 @@
-import { colors } from '../theme/colors'
+import { colors } from '@theme/colors'
 
 const colorMap: Record<string, string> = {
   black: '#111827',

@@ -1,20 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import 'react-native-gesture-handler'
-import { StatusBar, useColorScheme } from 'react-native'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { Provider } from 'react-redux'
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
-import { store } from './store'
-import RootNavigator from './navigation'
+import 'react-native-gesture-handler';
+import { StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
+import { store } from '@store';
+import RootNavigator from '@navigation';
 
 const App = () => {
-  const isDark = useColorScheme() === 'dark'
+  const isDark = useColorScheme() === 'dark';
   return (
     <Provider store={store}>
       <SafeAreaProvider>
@@ -24,7 +21,7 @@ const App = () => {
         </NavigationContainer>
       </SafeAreaProvider>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

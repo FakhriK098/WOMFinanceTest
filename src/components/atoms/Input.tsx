@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { TextInput, StyleSheet, View, useColorScheme } from 'react-native'
-import type { InputAtomProps } from '../../types/components'
-import { colors } from '../../theme/colors'
-import { spacing } from '../../theme/spacing'
-import { radius } from '../../theme/radius'
-import { dimensions } from '../../theme/dimensions'
+import type { InputAtomProps } from '@typings/components'
+import { colors } from '@theme/colors'
+import { spacing } from '@theme/spacing'
+import { radius } from '@theme/radius'
+import { dimensions } from '@theme/dimensions'
 
 const Input = ({ style, error, secureTextEntry, ...rest }: InputAtomProps) => {
   const isDark = useColorScheme() === 'dark'

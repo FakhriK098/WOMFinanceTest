@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, StyleSheet, useColorScheme } from 'react-native'
 import Text from '../atoms/Text'
-import type { AuthTemplateProps } from '../../types/components'
-import { colors } from '../../theme/colors'
-import { spacing } from '../../theme/spacing'
-import { radius } from '../../theme/radius'
-import { typography } from '../../theme/typography'
+import type { AuthTemplateProps } from '@typings/components'
+import { colors } from '@theme/colors'
+import { spacing } from '@theme/spacing'
+import { radius } from '@theme/radius'
+import { typography } from '@theme/typography'
 import Spacer from '../atoms/Spacer'
 
 const AuthTemplate = ({ title, children }: AuthTemplateProps) => {

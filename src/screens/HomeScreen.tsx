@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -8,23 +8,22 @@ import {
   StyleSheet,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import Text from '../components/atoms/Text';
-import Button from '../components/atoms/Button';
-import Fab from '../components/atoms/Fab';
-import { logout } from '../store/slices/authSlice';
-import { RootState, AppDispatch } from '../store';
-import { colors } from '../theme/colors';
-import { spacing } from '../theme/spacing';
-import { typography } from '../theme/typography';
-import Spacer from '../components/atoms/Spacer';
-import { fetchPokemons } from '../store/slices/pokemonSlice';
-import PokemonCard from '../components/molecules/PokemonCard';
+import { Text, Button, Fab, PokemonCard, EmptyList, Spacer } from '@components';
+import { logout } from '@store/slices/authSlice';
+import { RootState, AppDispatch } from '@store';
+import { colors } from '@theme/colors';
+import { spacing } from '@theme/spacing';
+import { typography } from '@theme/typography';
+import { fetchPokemons } from '@store/slices/pokemonSlice';
 import { useNavigation } from '@react-navigation/native';
-import EmptyList from '../components/molecules/EmptyList';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '@typings/navigation';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const navigation = useNavigation();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const email = useSelector((s: RootState) => s.auth.email);
   const { items, loading, error, refreshing, nextUrl } = useSelector(
@@ -33,19 +32,6 @@ const HomeScreen = () => {
   const isDark = useColorScheme() === 'dark';
   const listContentStyle = styles.listContent;
   const columnWrapperStyle = styles.columnWrapper;
-
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: true,
-      title: email || 'Beranda',
-      headerStyle: {
-        backgroundColor: isDark
-          ? colors.background.dark
-          : colors.background.light,
-      },
-      headerTintColor: isDark ? colors.text.dark : colors.text.light,
-    });
-  }, [navigation, email, isDark]);
 
   useEffect(() => {
     dispatch(fetchPokemons({ reset: true }));
@@ -56,9 +42,28 @@ const HomeScreen = () => {
   }, [dispatch]);
 
   const renderItem = useCallback(
-    ({ item }: { item: (typeof items)[number] }) => <PokemonCard item={item} />,
-    [],
+    ({ item }: { item: (typeof items)[number] }) => (
+      <PokemonCard
+        item={item}
+        onPress={() => navigation.navigate('Detail', { id: item.id })}
+      />
+    ),
+    [navigation],
   );
+
+  const renderHeader = useCallback(() => {
+    return (
+      <View style={styles.header}>
+        <Text
+          size={typography.lg}
+          weight="bold"
+          color={isDark ? colors.text.dark : colors.text.light}
+        >
+          {`Email: ${email}`}
+        </Text>
+      </View>
+    );
+  }, [email, isDark]);
   const keyExtractor = useCallback(
     (it: (typeof items)[number]) => String(it.id),
     [],
@@ -99,72 +104,71 @@ const HomeScreen = () => {
   }
 
   return (
-    <View
-      style={[
-        styles.container,
-        {
+    <SafeAreaView>
+      <View
+        style={{
           backgroundColor: isDark
             ? colors.background.dark
             : colors.background.light,
-        },
-      ]}
-    >
-      {error ? (
-        <View style={styles.errorWrap}>
-          <Text
-            size={typography.sm}
-            color={isDark ? colors.text.mutedDark : colors.text.mutedLight}
-          >
-            {error}
-          </Text>
-          <Spacer size={spacing.lg} />
-          <Button title="Coba Lagi" onPress={onRefresh} />
-        </View>
-      ) : (
-        <FlatList
-          data={items}
-          keyExtractor={keyExtractor}
-          renderItem={renderItem}
-          numColumns={2}
-          contentContainerStyle={listContentStyle}
-          columnWrapperStyle={columnWrapperStyle}
-          showsVerticalScrollIndicator={false}
-          ListEmptyComponent={
-            !loading && !refreshing ? <EmptyList isDark={isDark} /> : undefined
-          }
-          refreshControl={
-            <RefreshControl
-              refreshing={refreshing}
-              onRefresh={onRefresh}
-              tintColor={colors.primary}
-            />
-          }
-          onEndReached={debouncedLoadMore}
-          onEndReachedThreshold={0.5}
-          ListFooterComponent={
-            loading && items.length > 0 ? (
-              <View style={styles.footer}>
-                <ActivityIndicator />
-              </View>
-            ) : null
-          }
+        }}
+      >
+        {error ? (
+          <View style={styles.errorWrap}>
+            <Text
+              size={typography.sm}
+              color={isDark ? colors.text.mutedDark : colors.text.mutedLight}
+            >
+              {error}
+            </Text>
+            <Spacer size={spacing.lg} />
+            <Button title="Coba Lagi" onPress={onRefresh} />
+          </View>
+        ) : (
+          <FlatList
+            data={items}
+            keyExtractor={keyExtractor}
+            renderItem={renderItem}
+            numColumns={2}
+            contentContainerStyle={listContentStyle}
+            columnWrapperStyle={columnWrapperStyle}
+            showsVerticalScrollIndicator={false}
+            ListEmptyComponent={
+              !loading && !refreshing ? (
+                <EmptyList isDark={isDark} />
+              ) : undefined
+            }
+            refreshControl={
+              <RefreshControl
+                refreshing={refreshing}
+                onRefresh={onRefresh}
+                tintColor={colors.primary}
+              />
+            }
+            ListHeaderComponent={renderHeader}
+            onEndReached={debouncedLoadMore}
+            onEndReachedThreshold={0.5}
+            ListFooterComponent={
+              loading && items.length > 0 ? (
+                <View style={styles.footer}>
+                  <ActivityIndicator />
+                </View>
+              ) : null
+            }
+          />
+        )}
+        <Fab
+          icon={require('@assets/logout.png')}
+          onPress={() => dispatch(logout())}
+          style={styles.fab}
+          backgroundColor={isDark ? colors.inputBg.dark : colors.primary}
+          tintColor={colors.white}
         />
-      )}
-      <Fab
-        icon={require('../assets/logout.png')}
-        onPress={() => dispatch(logout())}
-        style={styles.fab}
-        backgroundColor={isDark ? colors.inputBg.dark : colors.primary}
-        tintColor={colors.white}
-      />
-    </View>
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   center: {
     flex: 1,
     alignItems: 'center',
@@ -189,6 +193,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: spacing.lg,
     bottom: spacing.lg,
+  },
+  header: {
+    paddingVertical: spacing.sm,
   },
 });
 

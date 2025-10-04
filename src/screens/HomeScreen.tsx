@@ -6,6 +6,7 @@ import {
   View,
   useColorScheme,
   StyleSheet,
+  Alert,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Text, Button, Fab, PokemonCard, EmptyList, Spacer } from '@components';
@@ -86,20 +87,38 @@ const HomeScreen = () => {
     }, 300);
   }, [loadMore]);
 
+  const confirmLogout = useCallback(() => {
+    Alert.alert(
+      'Konfirmasi Logout',
+      'Apakah Anda yakin ingin keluar?',
+      [
+        { text: 'Batal', style: 'cancel' },
+        {
+          text: 'Keluar',
+          style: 'destructive',
+          onPress: () => dispatch(logout()),
+        },
+      ],
+      { cancelable: true },
+    );
+  }, [dispatch]);
+
   if (loading && items.length === 0) {
     return (
-      <View
-        style={[
-          styles.center,
-          {
-            backgroundColor: isDark
-              ? colors.background.dark
-              : colors.background.light,
-          },
-        ]}
-      >
-        <ActivityIndicator />
-      </View>
+      <SafeAreaView>
+        <View
+          style={[
+            styles.center,
+            {
+              backgroundColor: isDark
+                ? colors.background.dark
+                : colors.background.light,
+            },
+          ]}
+        >
+          <ActivityIndicator size="large" />
+        </View>
+      </SafeAreaView>
     );
   }
 
@@ -158,7 +177,7 @@ const HomeScreen = () => {
         )}
         <Fab
           icon={require('@assets/logout.png')}
-          onPress={() => dispatch(logout())}
+          onPress={confirmLogout}
           style={styles.fab}
           backgroundColor={isDark ? colors.inputBg.dark : colors.primary}
           tintColor={colors.white}

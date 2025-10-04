@@ -19,9 +19,9 @@ Features
 |  ---  |
 |  <img width="300" height="800" alt="Simulator Screenshot - iPhone 16 Pro - 2025-10-04 at 19 57 44" src="https://github.com/user-attachments/assets/41e3bd73-2897-44ae-8134-724140d917c5" />  |
 
+Build Apk
 
-
-
+You can get `app-debug.apk` in [Github Actions](https://github.com/FakhriK098/WOMFinanceTest/actions)
 
 Requirements
 

@@ -11,6 +11,18 @@ Features
 - Architecture: Redux Toolkit slices (`auth`, `pokemon`, `pokemonDetail`), Axios service with base URL and basic error mapping, typed models under `@typings`.
 - UI Kit: atoms/molecules/organisms/templates with reusable components (Button, Text, Input, FormField, Chip, Fab, etc.).
 
+|  Authentication  |  Home  |  Detail  |
+|  ---  |  ---  |  ---  |
+|  <img width="300" height="800" alt="Simulator Screenshot - iPhone 16 Pro - 2025-10-04 at 19 58 37" src="https://github.com/user-attachments/assets/f9774922-7207-492b-99bb-c35f7085d6dc" />  |  <img width="300" height="800" alt="Simulator Screenshot - iPhone 16 Pro - 2025-10-04 at 19 57 39" src="https://github.com/user-attachments/assets/24985d1d-f1d9-4168-bb37-a9a093ad7334" />  |  <img width="300" height="800" alt="Simulator Screenshot - iPhone 16 Pro - 2025-10-04 at 19 57 53" src="https://github.com/user-attachments/assets/48ffbddf-8d8d-4cf4-b28f-c7a86c32e193" />  |
+
+|  Alert Logout  |
+|  ---  |
+|  <img width="300" height="800" alt="Simulator Screenshot - iPhone 16 Pro - 2025-10-04 at 19 57 44" src="https://github.com/user-attachments/assets/41e3bd73-2897-44ae-8134-724140d917c5" />  |
+
+
+
+
+
 Requirements
 
 - Node `>=20`

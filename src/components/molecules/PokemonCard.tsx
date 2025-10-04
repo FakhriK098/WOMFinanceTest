@@ -1,18 +1,18 @@
-import React, { useMemo } from 'react'
-import { Image, StyleSheet, View, useColorScheme } from 'react-native'
-import Text from '../atoms/Text'
-import type { PokemonListItem } from '../../types/pokemon'
-import { colors } from '../../theme/colors'
-import { spacing } from '../../theme/spacing'
-import { radius } from '../../theme/radius'
-import { typography } from '../../theme/typography'
-import Spacer from '../atoms/Spacer'
-import { tintFromHex } from '../../utils/pokemon'
+import React, { useMemo } from 'react';
+import { Image, Pressable, StyleSheet, useColorScheme } from 'react-native';
+import Text from '../atoms/Text';
+import type { PokemonListItem } from '@typings/pokemon';
+import { colors } from '@theme/colors';
+import { spacing } from '@theme/spacing';
+import { radius } from '@theme/radius';
+import { typography } from '@theme/typography';
+import Spacer from '../atoms/Spacer';
+import { tintFromHex } from '@utils/pokemon';
 
-type Props = { item: PokemonListItem }
+type Props = { item: PokemonListItem; onPress?: () => void };
 
-const PokemonCard = ({ item }: Props) => {
-  const isDark = useColorScheme() === 'dark'
+const PokemonCard = ({ item, onPress }: Props) => {
+  const isDark = useColorScheme() === 'dark';
   const containerStyle = useMemo(
     () => [
       styles.card,
@@ -21,13 +21,19 @@ const PokemonCard = ({ item }: Props) => {
         borderColor: item.color,
       },
     ],
-    [item.color]
-  )
-  const nameColor = isDark ? colors.text.dark : colors.text.light
-  const typeColor = isDark ? colors.text.mutedDark : colors.text.mutedLight
+    [item.color],
+  );
+  const nameColor = isDark ? colors.text.dark : colors.text.light;
+  const typeColor = isDark ? colors.text.mutedDark : colors.text.mutedLight;
   return (
-    <View style={containerStyle}>
-      {!!item.image && <Image source={{ uri: item.image }} style={styles.image} resizeMode="contain" />}
+    <Pressable style={containerStyle} onPress={onPress}>
+      {!!item.image && (
+        <Image
+          source={{ uri: item.image }}
+          style={styles.image}
+          resizeMode="contain"
+        />
+      )}
       <Spacer size={spacing.sm} />
       <Text weight="bold" size={typography.sm} color={nameColor}>
         {item.name}
@@ -35,9 +41,9 @@ const PokemonCard = ({ item }: Props) => {
       <Text size={typography.xs} color={typeColor}>
         {item.types.join(' • ')}
       </Text>
-    </View>
-  )
-}
+    </Pressable>
+  );
+};
 
 const styles = StyleSheet.create({
   card: {
@@ -51,6 +57,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 100,
   },
-})
+});
 
-export default React.memo(PokemonCard)
+export default React.memo(PokemonCard);

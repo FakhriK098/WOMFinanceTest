@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image, Pressable, StyleSheet } from 'react-native';
-import { colors } from '../../theme/colors';
-import { spacing } from '../../theme/spacing';
-import { radius } from '../../theme/radius';
-import { FABProps } from '../../types/components';
+import { colors } from '@theme/colors';
+import { spacing } from '@theme/spacing';
+import { radius } from '@theme/radius';
+import { FABProps } from '@typings/components';
 
 const Fab = ({
   onPress,

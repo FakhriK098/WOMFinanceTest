@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native';
 import FormField from '../molecules/FormField';
 import Button from '../atoms/Button';
 import Text from '../atoms/Text';
-import type { LoginFormProps } from '../../types/components';
-import { colors } from '../../theme/colors';
-import { spacing } from '../../theme/spacing';
-import { typography } from '../../theme/typography';
+import type { LoginFormProps } from '@typings/components';
+import { colors } from '@theme/colors';
+import { spacing } from '@theme/spacing';
+import { typography } from '@theme/typography';
 import Spacer from '../atoms/Spacer';
 
 const LoginForm = ({ onSubmit, loading, error }: LoginFormProps) => {

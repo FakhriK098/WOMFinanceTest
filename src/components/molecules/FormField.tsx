@@ -2,11 +2,11 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Text from '../atoms/Text';
 import Input from '../atoms/Input';
-import type { FormFieldProps } from '../../types/components';
-import { colors } from '../../theme/colors';
-import { typography } from '../../theme/typography';
+import type { FormFieldProps } from '@typings/components';
+import { colors } from '@theme/colors';
+import { typography } from '@theme/typography';
 import Spacer from '../atoms/Spacer';
-import { spacing } from '../../theme/spacing';
+import { spacing } from '@theme/spacing';
 
 const FormField = ({
   label,

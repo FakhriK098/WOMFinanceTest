@@ -1,5 +1,7 @@
 module.exports = {
   preset: 'react-native',
+  watchman: false,
+  coverageDirectory: './coverage',
   moduleNameMapper: {
     '^@components$': '<rootDir>/src/components/index',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
@@ -12,5 +14,11 @@ module.exports = {
     '^@services/(.*)$': '<rootDir>/src/services/$1',
     '^@navigation/(.*)$': '<rootDir>/src/navigation/$1',
     '^@assets/(.*)$': '<rootDir>/src/assets/$1',
+  },
+  coverageThreshold: {
+    global: {
+      lines: 0,
+      statements: 20,
+    },
   },
 };

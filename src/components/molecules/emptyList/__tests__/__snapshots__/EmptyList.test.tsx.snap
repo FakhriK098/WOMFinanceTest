@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyList molecule matches snapshot with default message 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    Belum ada data
+  </Text>
+</View>
+`;

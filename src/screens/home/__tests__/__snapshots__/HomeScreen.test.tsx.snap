@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders error state with retry (snapshot) 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#6B7280",
+              "fontSize": 14,
+              "fontWeight": "400",
+            },
+            undefined,
+          ]
+        }
+      >
+        Gagal memuat data
+      </Text>
+      <View
+        style={
+          {
+            "height": 20,
+            "width": 20,
+          }
+        }
+      />
+      <View
+        accessibilityRole="button"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#4F46E5",
+              "borderRadius": 12,
+              "paddingVertical": 14,
+            },
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            Coba Lagi
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "borderRadius": 16,
+            "elevation": 4,
+            "height": 56,
+            "justifyContent": "center",
+            "padding": 8,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 6,
+            "width": 56,
+          },
+          {
+            "backgroundColor": "#4F46E5",
+          },
+          {
+            "bottom": 20,
+            "position": "absolute",
+            "right": 20,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          {
+            "testUri": "../../../src/assets/logout.png",
+          }
+        }
+        style={
+          [
+            {
+              "height": 24,
+              "width": 24,
+            },
+            {
+              "tintColor": "#FFFFFF",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;
+
+exports[`HomeScreen shows initial loading state (snapshot) 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        {
+          "backgroundColor": "#FFFFFF",
+        },
+      ]
+    }
+  >
+    <ActivityIndicator
+      size="large"
+    />
+  </View>
+</RNCSafeAreaView>
+`;

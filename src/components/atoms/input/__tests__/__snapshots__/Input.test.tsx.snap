@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input atom matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "paddingHorizontal": 14,
+      },
+      {
+        "backgroundColor": "#1118270D",
+        "borderColor": "#E5E7EB",
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    autoCapitalize="none"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    placeholder="Type"
+    placeholderTextColor="#6B7280"
+    style={
+      [
+        {
+          "height": 48,
+        },
+        {
+          "color": "#111827",
+        },
+        undefined,
+      ]
+    }
+    value=""
+  />
+</View>
+`;

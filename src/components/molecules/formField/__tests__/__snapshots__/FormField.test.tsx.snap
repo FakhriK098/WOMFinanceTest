@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField molecule matches snapshot (no error) 1`] = `
+<View
+  style={
+    {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    Email
+  </Text>
+  <View
+    style={
+      {
+        "height": 8,
+        "width": 8,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "borderRadius": 12,
+          "borderWidth": 1,
+          "paddingHorizontal": 14,
+        },
+        {
+          "backgroundColor": "#1118270D",
+          "borderColor": "#E5E7EB",
+        },
+        false,
+        false,
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      keyboardType="default"
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Your email"
+      placeholderTextColor="#6B7280"
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "color": "#111827",
+          },
+          undefined,
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`FormField molecule renders error text and sets Input error 1`] = `
+<View
+  style={
+    {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    Password
+  </Text>
+  <View
+    style={
+      {
+        "height": 8,
+        "width": 8,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "borderRadius": 12,
+          "borderWidth": 1,
+          "paddingHorizontal": 14,
+        },
+        {
+          "backgroundColor": "#1118270D",
+          "borderColor": "#E5E7EB",
+        },
+        false,
+        {
+          "borderColor": "#DC2626",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      keyboardType="default"
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Password"
+      placeholderTextColor="#6B7280"
+      secureTextEntry={true}
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "color": "#111827",
+          },
+          undefined,
+        ]
+      }
+      value=""
+    />
+  </View>
+  <Text
+    style={
+      [
+        {
+          "color": "#DC2626",
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "marginTop": 6,
+        },
+      ]
+    }
+  >
+    Required
+  </Text>
+</View>
+`;

@@ -3,12 +3,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useDispatch, useSelector } from 'react-redux';
 import { initAuth, logout } from '@store/slices/authSlice';
 import { RootState, AppDispatch } from '@store';
-import LoginScreen from '@screens/LoginScreen';
-import HomeScreen from '@screens/HomeScreen';
-import DetailScreen from '@screens/DetailScreen';
 import { ActivityIndicator, View, AppState } from 'react-native';
 import { enableScreens } from 'react-native-screens';
 import type { RootStackParamList } from '@typings/navigation';
+import HomeScreen from '@screens/home/HomeScreen';
+import DetailScreen from '@screens/detail/DetailScreen';
+import LoginScreen from '@screens/login/LoginScreen';
 
 enableScreens(true);
 

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoRow molecule matches snapshot and shows label/value 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingVertical": 6,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    Height
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#111827",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    7
+  </Text>
+</View>
+`;

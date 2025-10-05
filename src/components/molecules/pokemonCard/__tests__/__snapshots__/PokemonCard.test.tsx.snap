@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonCard molecule matches snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "flex": 1,
+        "margin": 4,
+        "padding": 14,
+      },
+      {
+        "backgroundColor": "rgba(34, 197, 94, 0.15)",
+        "borderColor": "#22c55e",
+      },
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "http://img",
+      }
+    }
+    style={
+      {
+        "height": 100,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "height": 8,
+        "width": 8,
+      }
+    }
+  />
+  <Text
+    style={
+      [
+        {
+          "color": "#111827",
+          "fontSize": 14,
+          "fontWeight": "700",
+        },
+        undefined,
+      ]
+    }
+  >
+    Bulbasaur
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    grass • poison
+  </Text>
+</View>
+`;

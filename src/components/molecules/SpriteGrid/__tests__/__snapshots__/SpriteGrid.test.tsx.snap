@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpriteGrid molecule matches snapshot and renders images 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "gap": 8,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "http://a",
+      }
+    }
+    style={
+      {
+        "height": 72,
+        "width": 72,
+      }
+    }
+  />
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "http://b",
+      }
+    }
+    style={
+      {
+        "height": 72,
+        "width": 72,
+      }
+    }
+  />
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "http://c",
+      }
+    }
+    style={
+      {
+        "height": 72,
+        "width": 72,
+      }
+    }
+  />
+</View>
+`;

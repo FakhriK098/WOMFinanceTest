@@ -1,0 +1,737 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailScreen renders detail content (snapshot) 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    {
+      "padding": 20,
+    }
+  }
+  showsVerticalScrollIndicator={false}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+    ]
+  }
+>
+  <View>
+    <Image
+      resizeMode="contain"
+      source={
+        {
+          "uri": "http://img",
+        }
+      }
+      style={
+        [
+          {
+            "borderRadius": 12,
+            "borderWidth": 2,
+            "height": 180,
+            "marginBottom": 20,
+            "width": "100%",
+          },
+          {
+            "borderColor": "#22c55e",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        {
+          "marginBottom": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#111827",
+              "fontSize": 24,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        bulbasaur
+      </Text>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "gap": 8,
+            "marginTop": 8,
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "alignSelf": "flex-start",
+                "borderRadius": 12,
+                "paddingHorizontal": 8,
+                "paddingVertical": 4,
+              },
+              {
+                "backgroundColor": "#22c55e",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                undefined,
+              ]
+            }
+          >
+            grass
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "alignSelf": "flex-start",
+                "borderRadius": 12,
+                "paddingHorizontal": 8,
+                "paddingVertical": 4,
+              },
+              {
+                "backgroundColor": "#22c55e",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                undefined,
+              ]
+            }
+          >
+            poison
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#111827",
+              "fontSize": 18,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        Informasi
+      </Text>
+      <View
+        style={
+          {
+            "height": 8,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 6,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#6B7280",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          Tinggi
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#111827",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          7
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 6,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#6B7280",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          Berat
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#111827",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          69
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 6,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#6B7280",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          Base XP
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#111827",
+                "fontSize": 14,
+                "fontWeight": "400",
+              },
+              undefined,
+            ]
+          }
+        >
+          64
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#111827",
+              "fontSize": 18,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        Abilities
+      </Text>
+      <View
+        style={
+          {
+            "height": 8,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "gap": 8,
+            "marginTop": 8,
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "alignSelf": "flex-start",
+                "borderRadius": 12,
+                "paddingHorizontal": 8,
+                "paddingVertical": 4,
+              },
+              {
+                "backgroundColor": "#22c55e",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                undefined,
+              ]
+            }
+          >
+            overgrow
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "alignSelf": "flex-start",
+                "borderRadius": 12,
+                "paddingHorizontal": 8,
+                "paddingVertical": 4,
+              },
+              {
+                "backgroundColor": "#22c55e",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                undefined,
+              ]
+            }
+          >
+            chlorophyll
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#111827",
+              "fontSize": 18,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        Sprites
+      </Text>
+      <View
+        style={
+          {
+            "height": 8,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "gap": 8,
+          }
+        }
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            {
+              "uri": "http://s1",
+            }
+          }
+          style={
+            {
+              "height": 72,
+              "width": 72,
+            }
+          }
+        />
+        <Image
+          resizeMode="contain"
+          source={
+            {
+              "uri": "http://s2",
+            }
+          }
+          style={
+            {
+              "height": 72,
+              "width": 72,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#111827",
+              "fontSize": 18,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        Evolutions
+      </Text>
+      <View
+        style={
+          {
+            "height": 8,
+          }
+        }
+      />
+      <RCTScrollView
+        contentContainerStyle={
+          {
+            "gap": 8,
+          }
+        }
+        data={
+          [
+            {
+              "id": 2,
+              "image": "http://img2",
+              "name": "ivysaur",
+            },
+            {
+              "id": 3,
+              "image": "http://img3",
+              "name": "venusaur",
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={0.0001}
+        showsHorizontalScrollIndicator={false}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
+      >
+        <View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 12,
+                  "padding": 8,
+                  "width": 100,
+                }
+              }
+            >
+              <Image
+                resizeMode="contain"
+                source={
+                  {
+                    "uri": "http://img2",
+                  }
+                }
+                style={
+                  {
+                    "height": 72,
+                    "marginBottom": 4,
+                    "width": 72,
+                  }
+                }
+              />
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#111827",
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                ivysaur
+              </Text>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 12,
+                  "padding": 8,
+                  "width": 100,
+                }
+              }
+            >
+              <Image
+                resizeMode="contain"
+                source={
+                  {
+                    "uri": "http://img3",
+                  }
+                }
+                style={
+                  {
+                    "height": 72,
+                    "marginBottom": 4,
+                    "width": 72,
+                  }
+                }
+              />
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#111827",
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                venusaur
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`DetailScreen shows error state (snapshot) 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#6B7280",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        undefined,
+      ]
+    }
+  >
+    Error
+  </Text>
+</View>
+`;
+
+exports[`DetailScreen shows loading state (snapshot) 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+    ]
+  }
+>
+  <ActivityIndicator />
+</View>
+`;

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fab atom matches snapshot 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 16,
+        "elevation": 4,
+        "height": 56,
+        "justifyContent": "center",
+        "padding": 8,
+        "shadowColor": "#000",
+        "shadowOffset": {
+          "height": 3,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 6,
+        "width": 56,
+      },
+      {
+        "backgroundColor": "#4F46E5",
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "icon",
+      }
+    }
+    style={
+      [
+        {
+          "height": 24,
+          "width": 24,
+        },
+        {
+          "tintColor": "#FFFFFF",
+        },
+      ]
+    }
+  />
+</View>
+`;
